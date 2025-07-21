@@ -4,6 +4,7 @@ import com.cedacri.core.ProductCreatedEvent;
 import com.cedacri.microservice_project.dto.ProductDto;
 import com.cedacri.microservice_project.service.ProductService;
 import lombok.RequiredArgsConstructor;
+import org.apache.kafka.clients.producer.ProducerRecord;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -25,10 +26,20 @@ public class ProductServiceImpl implements ProductService {
     public String createProduct(ProductDto productDto) throws ExecutionException, InterruptedException {
         String productId = UUID.randomUUID().toString();
 
+        String topic = "product-created-events-topic";
+
         ProductCreatedEvent productCreatedEvent = new ProductCreatedEvent(productId, productDto.getTitle(), productDto.getPrice(), productDto.getQuantity());
 
+        ProducerRecord<String, ProductCreatedEvent> record = new ProducerRecord<>(
+                topic,
+                productId,
+                productCreatedEvent
+        );
+
+        record.headers().add("messageId", UUID.randomUUID().toString().getBytes());
+
         SendResult<String, ProductCreatedEvent> result =
-                kafkaTemplate.send("product-created-events-topic", productId, productCreatedEvent).get();
+                kafkaTemplate.send(record).get();
 
         LOGGER.info("Topic : {}", result.getRecordMetadata().topic());
         LOGGER.info("Partition : {}", result.getRecordMetadata().partition());

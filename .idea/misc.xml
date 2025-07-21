@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/EmailNotificationMicroservice/pom.xml" />
         <option value="$PROJECT_DIR$/core/pom.xml" />
         <option value="$PROJECT_DIR$/ProductMicroservice/pom.xml" />
+        <option value="$PROJECT_DIR$/MockService/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

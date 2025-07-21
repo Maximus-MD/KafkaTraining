@@ -1,0 +1,6 @@
+C:\Users\crme268\Downloads\vaadin-database-example-24\ProductNotifier\EmailNotificationMicroservice\src\main\java\com\cedacri\emailnotification\config\EmailNotificationConfiguration.java
+C:\Users\crme268\Downloads\vaadin-database-example-24\ProductNotifier\EmailNotificationMicroservice\src\main\java\com\cedacri\emailnotification\config\KafkaConfig.java
+C:\Users\crme268\Downloads\vaadin-database-example-24\ProductNotifier\EmailNotificationMicroservice\src\main\java\com\cedacri\emailnotification\EmailNotificationMicroserviceApplication.java
+C:\Users\crme268\Downloads\vaadin-database-example-24\ProductNotifier\EmailNotificationMicroservice\src\main\java\com\cedacri\emailnotification\exception\NonRetryableException.java
+C:\Users\crme268\Downloads\vaadin-database-example-24\ProductNotifier\EmailNotificationMicroservice\src\main\java\com\cedacri\emailnotification\exception\RetryableException.java
+C:\Users\crme268\Downloads\vaadin-database-example-24\ProductNotifier\EmailNotificationMicroservice\src\main\java\com\cedacri\emailnotification\handler\ProductCreatedEventHandler.java

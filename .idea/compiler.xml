@@ -18,6 +18,7 @@
         </processorPath>
         <module name="EmailNotificationMicroservice" />
         <module name="ProductMicroservice" />
+        <module name="MockService" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -27,6 +28,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="EmailNotificationMicroservice" options="-parameters" />
+      <module name="MockService" options="-parameters" />
       <module name="ProductMicroservice" options="-parameters" />
       <module name="core" options="-parameters" />
     </option>
